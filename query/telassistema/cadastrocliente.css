@@ -1,0 +1,190 @@
+.main-cadastro{
+  
+    align-items: center;
+    width: 100%;
+    margin: 25px;
+    border: 1px solid;
+    
+  }
+  .main--card{
+  
+    border-radius: 15px;
+    margin: 20px;
+    background-color: rgb(119, 119, 119);
+    height: calc(100vh - 300px);
+    box-shadow: 0 0 8px #000;
+      text-shadow: 0 0 1px #ccc;
+    text-align: center;
+    display: flex;
+  }
+  
+  textarea {
+  
+    resize: none;
+      font-size: .8rem;
+      letter-spacing: 1px;
+  }
+  textarea {
+    padding: 10px;
+    width: 80%;
+    height: 150px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+  }
+  .nome-sobre{
+    margin-top: 25px;
+    
+    margin-left: 100px;
+  }
+  .nome-sobre input{
+  
+      text-align: center;
+      padding: 15px;
+      width: 100%;
+      margin-bottom:5px ;
+      
+      font-size: 16px;
+      border: 1px solid black;
+      border-radius: 8px;
+      outline:none;
+  }
+  label{
+    
+    color:white;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  .Endereço select{
+    
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-bottom:5px ;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+    outline:none;
+  
+  }
+  .Endereço{
+    margin-top: 25px;
+    margin-left: 100px;
+  }
+  .Endereço input {
+  
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-bottom:5px ;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+    outline:none;
+    
+  }
+  
+  .main--card button{
+    width: 100%;
+    margin-top: 25px;
+    
+    border:none;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: #1877f2;
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+    transition: .3s;
+  }
+  .main--card button:hover{
+    background-color: #002b63;
+  }
+  
+  
+  /**/
+  /* imagem*/
+ input[type='file'] {
+    display: none;
+    
+  }
+  
+  .max-width { 
+    
+    margin-left: 45px;
+   
+    margin-top: 25px;
+    color:black;
+    font-size: 25px;
+   
+  }
+  
+  #imgPhoto {
+    
+    margin-top: 2%;
+    max-width: 200px;
+    height: 200px;
+    padding:10px;
+    background-color: #eee;
+    border: 5px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .3s;
+  }
+  
+  #imgPhoto:hover{
+    background-color: rgb(180, 180, 180);
+    border: 5px solid #111;
+  }
+
+
+
+  /* lancamento*/
+.Lancamento{
+  align-items: center;
+  width: 100%;
+  margin: 25px;
+  border: 1px solid;
+  display: none;
+
+}
+.card-lacamento{
+ 
+  border-radius: 15px;
+  margin: 20px;
+  background-color: rgb(119, 119, 119);
+  
+  box-shadow: 0 0 8px #000;
+	text-shadow: 0 0 1px #ccc;
+  text-align: center;
+  display: flex;
+}
+
+.dados1{
+
+  margin-left: 150px;
+
+}
+.dados1 input{
+ 
+  text-align: center;
+  padding: 15px;
+  width: 80%;
+  margin-bottom:15px ;
+  font-size: 16px;
+  border: 1px sold black;
+  border-radius: 8px;
+  outline:none;
+  
+}
+.dados1 select{
+  text-align: center;
+  padding: 15px;
+  width: 80%;
+  margin-bottom:15px ;
+  font-size: 16px;
+  border: 1px sold black;
+  border-radius: 8px;
+  outline:none;
+}

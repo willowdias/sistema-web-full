@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+        <meta charset="utf-8"/>
+        <title>Login</title>
+        <script type="text/javascript" src="js.js"></script>
+        <link rel="icon" type="imagem/png" href="facebook.png" />
+        <link rel="stylesheet" href="csslogin.css">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='tela/csslogin.css') }}">
+        <script type="text/javascript" src="{{url_for('static',filename='formjs/funcao.js')}}"></script>
+        <script src="https://kit.fontawesome.com/2440d93ffd.js" crossorigin="anonymous"></script>
+     
+</head>
+<body>
+    
+    <nav>
+        <ul class="menu">
+            
+            <li><a href="#">Sobre</a></li>
+            
+        </ul>   
+    </nav>
+    
+    <main>
+        <div class="main-inicial">
+            
+            <div class="main--description">
+                <h1 class="logo">Bokkrecibo</h1>
+                <p>Seja Bem vindo Sistema</p>
+
+            </div>
+            <div class="main-login"  id="login">
+               
+                <div class="main--card">
+                    <form method="POST" action="/autenticar">
+                        
+                        <div  class="label-input">
+                            <i class="far fa-envelope icon-modify"></i>
+                            <input id="login" type="text" name="username" placeholder="Email" >
+                        </div>
+                        <div class="label-input">
+                            
+                            <i class="fas fa-lock icon-modify"></i>
+                            <input id="senha" type="password" name="password"  placeholder="Senha" >
+                        </div>
+                        <button> Entrar</button>
+                    </form>
+                        <div class="Esquece-senha" >
+                            
+
+                                {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                {% for message in messages %}
+                                <a style="color: black;">{{ message }} /</a>
+                                 <a href="#">Esqueceu Senha?</a> 
+                                {% endfor %}
+                                
+                                {% endif %}
+                              {% endwith %}
+                              
+                        </div>
+                        <hr>
+                        <div class="main-create--conta">
+                           
+                            <a href="#"onclick="cadastrodirect()">Criar nova conta</a>
+                            
+                            
+                        </div>
+                        <div class="main--createnovapagina">
+                            <a href="#">Cria Pagina</a> para uma celebridade, uma marca ou uma empresa.
+                            
+                            
+                        </div>
+                        
+                        
+                </div>
+                 
+            </div>
+            <div id="abri-cadastro"class="cadastro-main">
+                <form method="post" action="cadastrosistema"> 
+                    <div class="main-cadastro">
+                        <span onclick="fecharcadastro()"class="close" title="Close Cadastro">x</span>
+                        <h1 class="h1-cadadstro">Cadastro Cliente</h1>
+                        <div class="email-cadastro">
+                            <label >Nome</label>
+                            <input type="text" name="nome-cadastro" placeholder="nome">
+                        </div>
+                        <div class="email-cadastro">
+                            <input type="text" name="email-sistema" placeholder="email">
+                        </div>
+                        <div class="email-cadastro">
+                            <input type="password" name="senha-email" placeholder="senha">
+                        </div>
+                        <center><label >Data nascimento</label></center>
+                        <div >
+                          
+                            <input id="senha" type="date" name="password"  placeholder="Senha" >
+                        </div>
+                        <hr>
+                        
+                        <button class="bnt">salvar</button>
+                            
+                        
+                    </div>
+                    
+                </form>
+        </div>   
+            
+        
+    </main>
+    
+        
+    </div>
+    
+    <footer>
+        <div class="footer-rodape">
+            <div class="footer-link border">
+                <ul>
+                  
+                        <li><a class="selected-lingua" href="#">Português (BR)</a></li>
+                        <li><a href="#">Português (PT)</a></li>
+                        <li><a href="#">Inglês (USA)</a></li>
+                        <li><a href="#">Inglês (ENG)</a></li>
+                        <li> <a href="#">Japonês (JAP)</a></li>
+                        <li><a href="#">Alemão (GER)</a></li>
+                        <li><a href="#" class="bt-n">+</a></li>
+                        
+                </ul>
+            </div>
+        
+
+        
+        
+            <div class="footer-link">
+                <ul>
+                    <li><a href="#">Cadastre-se</a></li>
+                    <li><a href="#">Entrar </a></li>
+                    <li><a href="#">Messenger </a></li>
+                    <li><a href="#">Facebook Lite</a></li>
+                    <li><a href="#">Watch</a></li>
+                    <li><a href="#">Pessoas</a>
+                    <li><a href="#">Categorias de Páginas</a></li>
+                    <li><a href="#">Locais</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Grupos</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Local</a></li>
+                    <li><a href="#">Campanhas de arrecadação de fundos</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Criar Anúncio</a></li>
+                    <li><a href="#">Criar Página</a></li>
+                    <li><a href="#">Desenvolvedores</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Termos</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                    <li> <a href="#">portugues</a>
+                    
+                </ul>
+            </div>
+            <div class="footer-link"> 
+                <p>Meta © 2022</p>
+        
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,362 @@
+body{
+
+    margin: 0px;
+    padding: 0px;
+    background-color: #f0f2f5;
+    font-family: 'robo',sans-serif;
+}
+
+.menu{
+    justify-content: center;
+    list-style:none;
+    width: 100%;
+    padding: 10px 50px;
+    margin-top: 0px;
+    display: flex;
+    background-color: #1877f2;
+    position: fixed;
+    
+}   
+.menu li{
+    position:relative;
+    float:left;
+    font-size: 20px;
+    
+    }
+    
+.menu li a{
+        color:white; 
+        text-decoration:none; 
+        padding:5px 10px; 
+        display:block;
+       
+    }
+        
+.menu li a:hover{
+    background:#1877f2 ;
+    color:#fff;
+    -moz-box-shadow:0 3px 5px 0px #CCC;
+    -webkit-box-shadow:0 3px 10px 0px #ccc;
+    text-shadow:0px 0px 5px 0px #fff;
+ }
+ /* fundo facebook*/
+.logo{
+    text-shadow: rgb(5, 33, 75) 5px 5px 6px ;
+} 
+
+h1,h2,h3,p,ul,li{
+    
+    margin: 0px;
+    padding: 0px;
+  
+}
+hr{
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+main{   
+    display:flex;
+    justify-content: center;
+   
+   
+}
+
+.main-inicial{
+    max-width:1000px ;  
+    height: calc(100vh - 250px);
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    
+}
+.main--description{
+    font-size: 28px;
+    padding: 15px;
+   
+}
+.main--description h1{
+    font-size: 120px;
+    font-family: 'Mulish',sans-serif;
+    color:#1877f2 ;
+}
+
+
+.main-login{
+    border: 0px solid black;
+
+}
+.main--card{
+    background-color: white;
+    width: 370px;
+    border-radius: 7px;
+    box-shadow:  0px 5px 10px #ccc;
+    padding: 15px;
+    text-align: center;
+}
+/* configura input*/
+.label-input {
+    background-color: #edf2f4;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.icon-modify {
+    color: #8d99ae;
+    padding: 0 10px;
+}
+.main--card input{
+    height: 45px;
+    border: none;
+    background-color: #edf2f4;
+    width: 100%;
+   
+}
+.main--card input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+.main--card button{
+    width: 100%;
+    margin-bottom: 15px;
+    border:none;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: #1877f2;
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+    transition: .3s;
+}
+.main--card button:hover{
+    background-color: #002b63;
+}
+/*cadastro usuario*/
+.cadastro-main{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.h1-cadadstro{
+    font-size: 45px;
+    font-family: 'Mulish',sans-serif;
+    color:#1877f2 ;
+
+}
+.close {
+    text-align: center;
+    font-size: 30px;
+    border: 4px solid white;
+    background: rgba(0, 145, 208);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, .3);
+    border-radius: 50%;
+    width: 41px;
+    position: absolute;
+    right: 0;
+    top: -31px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.main-cadastro{
+    background-color: white;
+    padding: 40px;
+    border: 2px solid rgba(0, 145, 208, 0.5);
+    box-shadow: 0 0 0 10px white;
+    margin: 200px;
+    left: 25%;
+    max-width: 400px;
+    position: relative;
+
+}
+.main-cadastro   input{
+    margin-top: 25px;
+    padding: 10px;
+    width: 90%;
+    margin-bottom:15px ;
+    font-size: 16px;
+    border: 1px sold black;
+    border-radius: 8px;
+    outline:none;
+}
+.main-cadastro button{
+    width: 100%;
+    margin-bottom: 15px;
+    border:none;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: #1877f2;
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+    transition: .3s;
+}
+.main--card button:hover{
+    background-color: #002b63;
+}
+
+
+
+/**/
+.Esquece-senha{
+    margin-bottom: 20px;
+
+}
+.Esquece-senha a{
+    text-decoration:none ;
+    font-size: 14px;
+    color :#1877f2;
+
+}
+.Esquece-senha a:hover{
+    text-decoration:underline ;
+}
+.main-create--conta{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+.main-create--conta a{
+    max-width: 50%;
+    text-decoration: none;
+    background-color:#59AE40 ;
+    padding: 10px;
+    color: white;
+    border-radius:5px;
+    font-weight: bold;
+
+}
+.main-create--conta a:hover{
+
+    background-color:#1b6105 ;
+}
+
+.main--createnovapagina a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.main--createnovapagina a:hover{
+    text-decoration: underline;
+    color: red;
+}
+.main--createnovapagina {
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+footer{
+    background-color: white;
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    justify-content: center ;
+    display: flex;
+}
+.footer-rodape{
+    width: 1000px;
+    padding: 10px 50px;
+
+}
+.footer-link{
+    margin-bottom: 10px;
+}
+.footer-link ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 12px;
+}
+.footer-link li{
+    margin: 0px 20px 5px 0px;
+}
+.footer-link a{
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+}
+.footer-link .bt-n{
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 0px 10px;
+}
+.footer-link p{
+    font-size: 11px;
+
+}
+.footer-link a:hover{
+    text-decoration: underline;
+}
+.border{
+    border-bottom: 1px solid #ccc;
+
+}
+
+
+@media screen and (max-width: 1000px) {
+    .main-inicial{
+        width: 0px;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .main--description {
+        margin-top: 160px;
+
+    }
+    .main--description h1{
+       text-align: center;
+       font-size: 58px;
+    }
+    .cadastro-main{
+        margin-top: 30px;
+        height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .main--description p{
+        font-size: 22px;
+        padding: 0px;
+        text-align: center;
+       
+    }
+    .main--card{
+        width: 320px;
+        margin-top: 30px;
+
+    }
+    footer{
+        display: none;
+    }
+    .menu{
+        margin-top: 0px;
+        padding: 0px;
+        display: -moz-deck;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+
+    }
+   
+    
+}
+

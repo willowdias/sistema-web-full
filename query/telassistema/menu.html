@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="utf-8"/>
+    <title>menu</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='tela/style.css') }}">
+    <script src="{{url_for('static', filename='formjs/scriptpython.js')}}"></script>
+    <script type="text/javascript" src="script.js"></script>
+   
+</head>
+<body>
+    
+
+            
+            <div class="container">
+               
+                
+                        <nav class="barra-menu-navigaton">
+                            <ul class="barra-menu">
+                                <li><a href="./telassistema/cadastrocliente.html" target="tela" >Clientes
+
+                                <li><a href="./telassistema/lancamento.html" target="tela" >Laçamento</a></li>
+                                
+                                <li><a href="#">Receber</a>
+                                <li><a href="#">Recebido</a></li>
+                                <li><a href="#">Contato</a></li>
+                            </ul>   
+                        </nav>
+                        <iframe src="" style="width: 100%;" name="tela"></iframe>
+            </div>
+            
+        <footer>
+            <h2 style="color: aliceblue; text-align: center;">Sistema</h2>
+            <div>
+                <ul class="rodape">
+                    <!-- a tag li serve pra marca -->
+                    <Li class="itens">Fsistema</Li>
+                    <Li class="itens">Sistema</Li>
+                    <Li class="itens" >Banco</Li>
+                    <Li class="itens" >Sobre!</Li>
+    
+                </ul>
+            </div>
+            
+            
+        </footer>
+          <div id="container-Lancamento" class="container-Lancamento">
+               
+                <center> <h1 class="logo"> Lançar</h1></center>
+                    <div class="card-lacamento">
+                        <span onclick="closelaunch()"class="close" title="Close Cadastro">x</span>
+                        <form action="">
+                            
+                            <div class="dados1">
+                                <div>
+                                    <label for="">nome</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label for="">Data Pagamento</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label for="">Tipo Documento</label>
+                                    <select name="" id="">
+                                        <option value="volvo">Volvo</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="">Valor</label>
+                                    <input type="text">
+                                </div>
+                                
+                            </div>
+                        </form>
+                        
+                    </div>  
+                    
+                
+                  
+            </div>   
+</body>    
+</html>

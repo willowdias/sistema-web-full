@@ -1,0 +1,96 @@
+<div id="cadastro-cliente"class="main-cadastro">
+    <link rel="stylesheet" href="cadastrocliente.css">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='csstelamenu/cadastrocliente.css') }}">              
+    <center> <h1 class="logo"> Cadastrar</h1></center>
+    <form >
+        <div id="cadastro-cliente"class="main--card">
+           
+            <div class="max-width" >
+                
+                <div class="imageContainer"> 
+                        <img src="facebook.png" onclick="selecionarimagen()"   alt="selecionar imagem" id="imgPhoto">
+                        
+                </div>                                   
+                <input  type="file" name="flImage" id="flImage"   accept="image/*">
+                <script src="script.js"></script>
+                <script src="{{url_for('static', filename='formjs/selecionarimagen.js')}}"></script>
+              
+  
+            </div>  
+            <div class="nome-sobre">
+
+
+                <div >
+                    <label>Nome*</label>
+                    <input id="nome-cd" type="text" name="nome-cd" placeholder="Nome" >
+                    
+                </div>
+            
+                
+                <div>
+                    <i class="fa fa-edit"></i>
+                    <label>Sobrenome*</label>
+                    <input type="text" placeholder="Sobrenome">
+                </div>
+                <label>Data Nascimento</label>
+                <div>
+                    <input type="date" id="diaa" name="diaa">
+                </div>
+                    <label  >Mensagem:</label>
+                <div>
+
+                    <textarea class="texto"  ></textarea>
+                </div>
+                
+                
+            
+            </div>   
+            <div class="Endereço">
+                <label >Cidade*</label>
+                <div>
+                    <input type="text" placeholder="Cidade">
+                </div>
+                
+                <Label>Cep*</Label>
+                <div>
+                    <input type="text" placeholder="Cep">
+                </div>
+                
+          
+                <label>Estado*</label>
+                <div>
+                    <select name="cars" id="cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>   
+                </div>
+                <div class="telefone esquerda" id="">
+                    <label for="telefone">Telefone:</label><br>
+                    <input type="text" placeholder="0000-0000">
+                </div>
+                <div class="celular direita" id="">
+                    <label for="celular">Ceular:</label><br>
+                    <input type="text" size="25" placeholder="(00) 0000-0000">
+                </div> 
+                <div class="esquerda" id="">
+                    <label for="email">E-mail:</label><br>
+                    <input type="text" size="35" placeholder="exemplo@email.com">
+                </div>
+            
+                <div >
+                    <button onclick="tablecliente()" > Entrar</button>
+                    
+                </div>
+                
+                
+            </div>
+            
+            
+        </div>        
+      
+    </form>  
+   
+      
+</div>

@@ -1,0 +1,358 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body{
+
+  background-color: #f0f2f5;
+  font-family: 'robo',sans-serif;
+}
+.barra-menu-navigaton{
+  justify-content: center;
+  list-style:none;
+  width: 100%;
+  padding: 10px 50px;
+
+  display: flex;
+  background-color: #1877f2;
+  position: fixed;
+
+  -moz-box-shadow:0 3px 5px 0px #CCC;
+  -webkit-box-shadow:0 3px 10px 0px #ccc;
+  text-shadow:0px 0px 5px 0px #fff;
+}
+.barra-menu-navigaton ul li{
+margin-left: 5px;
+  position:relative;
+  float:left;
+  font-size: 20px;
+  list-style:none;
+  background-color: #1877f2;
+  }
+  
+
+ nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  
+
+
+}
+
+ nav ul ul li{
+  width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
+  top: 20px;
+
+}
+
+nav a{
+
+    display: block;
+    padding: 0 15px;
+    color: #fff;
+    line-height: 60px;
+    font-size: 20px;
+    text-decoration: none;
+}
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+.barra-menu-navigaton li a{
+      color:white; 
+      text-decoration:none; 
+      padding:5px 10px; 
+      display:block;
+     
+  }
+      
+.barra-menu-navigaton li a:hover{
+  background:#1877f2 ;
+  color:#fff;
+  -moz-box-shadow:0 3px 5px 0px #CCC;
+  -webkit-box-shadow:0 3px 10px 0px #ccc;
+  text-shadow:0px 0px 5px 0px #fff;
+}
+/*botao entra cadastro*/
+.bnt{
+ align-items: center;
+ justify-content: center;
+}
+.bnt button{
+position: relative;
+width: 450px;
+border:none;
+border-radius: 5px;
+padding: 12px;
+background-color: #1877f2;
+font-size: 20px;
+color: white;
+font-weight: bolder;
+transition: .3s;
+}
+.bnt button:hover{
+background-color: #002b63;
+}
+/*botao feccha pra telas*/
+.close {
+text-align: center;
+font-size: 30px;
+border: 4px solid white;
+background: rgba(0, 145, 208);
+box-shadow: 0 4px 4px 0 rgba(0, 0, .3);
+border-radius: 50%;
+width: 41px;
+position: absolute;
+right: -25px;
+top: -31px;
+color: #fff;
+cursor: pointer;
+}
+/*ALErtA SISTEMA*/
+.modalerro{
+height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+}
+.alerta-erro{
+background-color: white;
+padding: 40px;
+border: 2px solid rgba(0, 145, 208, 0.5);
+box-shadow: 0 0 0 10px white;
+margin-top: 150px;
+left: 50%;
+max-width: 400px;
+position: relative;
+}
+.close-alerta {
+text-align: center;
+font-size: 30px;
+color: pink;
+background-color: #111;
+border-radius: 50%;
+width: 41px;
+position: absolute;
+cursor: pointer;
+right: -25px;
+top: -31px;
+}
+/*container-sistema fundo da tela*/
+.container-sistema{
+  justify-content: center;
+  list-style:none;
+  height: 100vh;
+  padding: 10px 50px;
+  margin-top: 0px;
+  display: block;
+  background-image: url("/static/fundo11.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+/**/
+.main-cadastro h1{
+    margin-top: 75px;
+    background-color: yellow;
+}
+.main-cadastro{
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+   
+}
+.main--card{
+  background-color: #ccc;
+  width: 50%;
+  border: 2px solid rgba(0, 145, 208, 0.5);
+  box-shadow: 0 0 0 10px rgb(231, 231, 231);
+  margin:25px;
+  left: 25%;
+  position: relative;
+  display: flex;
+}
+label{
+    color: rgb(32, 30, 30);
+    font-size: 20px;
+}
+textarea {
+
+  resize: none;
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+textarea {
+  padding: 10px;
+  width: 100%;
+  height: 150px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+
+.main--card input ,
+.main--card select{
+  text-align: center;
+  height: 45px;
+  border: none;
+  background-color: #edf2f4;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+.container-Endereço{
+    text-align: center;
+    margin: 25px;
+}
+.container-sobre{
+  text-align: center;
+  margin: 25px;
+}
+/* tabelas cadastro clientes*/
+.table-clientes{
+
+margin: 100px;
+font-family: arial;
+border-collapse: collapse;
+background-color: rgb(128, 124, 124);
+
+}
+.cabeca{
+ 
+background-color: yellow;
+height: 50px;
+font-size: 20px;
+}
+table{
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+margin: 25px;
+
+}
+
+td,  th {
+  text-align: center;
+border: 1px solid #ddd;
+padding: 8px;
+
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:hover {background-color: #ddd;}
+.atualizar-cliente{
+margin-bottom: 20px;
+
+}
+.atualizar-cliente a{
+text-decoration:none ;
+background-color:#1877f2;;
+padding: 15px;
+font-size: 20px;
+  color: white;
+  font-weight: bolder;
+  transition: .3s;;
+}
+.atualizar-cliente a:hover{
+text-decoration:underline ;
+background-color: #002b63;
+}
+/*container-Lancamento lançamento*/
+.container-Lancamento{
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+
+}
+
+
+.container-Lancamento h1{
+  margin-top: 75px;
+  background-color: yellow;
+  
+}
+.card-lacamento{
+background-color: #ccc;
+  width: 50%;
+  border: 2px solid rgba(0, 145, 208, 0.5);
+  box-shadow: 0 0 0 10px rgb(231, 231, 231);
+  margin:25px;
+  left: 25%;
+  position: relative;
+  display: flex;
+}
+.card-lacamento{
+text-align: center;
+}
+.card-lacamento input ,
+.card-lacamento select{
+  text-align: center;
+  height: 45px;
+  border: none;
+  background-color: #edf2f4;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+/*imagen cadastro*/
+input[type='file'] {
+  display: none;
+  
+}
+.max-width { 
+  
+  margin-left: 45px;
+ 
+  margin-top: 25px;
+  color:black;
+  font-size: 25px;
+ 
+}
+
+#imgPhoto {
+  
+  margin-top: 2%;
+  max-width: 200px;
+  height: 200px;
+  padding:10px;
+  background-color: #eee;
+  border: 5px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+#imgPhoto:hover{
+  background-color: rgb(180, 180, 180);
+  border: 5px solid #111;
+}
+
+/**/

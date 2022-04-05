@@ -1,0 +1,173 @@
+<script>
+    "Cliente excluidor" 
+function  excluir(){
+    document.getElementById("clientexcluido").style.display="block"
+    document.getElementById("erro").textContent="Cliente Excluido"
+    
+    
+}
+</script>
+<style>
+ .close {
+text-align: center;
+font-size: 30px;
+border: 4px solid white;
+background: rgba(0, 145, 208);
+box-shadow: 0 4px 4px 0 rgba(0, 0, .3);
+border-radius: 50%;
+width: 41px;
+position: absolute;
+right: -25px;
+top: -31px;
+color: #fff;
+cursor: pointer;
+}
+/*ALErtA SISTEMA*/
+.modalerro{
+height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+}
+.alerta-erro{
+background-color: white;
+padding: 40px;
+border: 2px solid rgba(0, 145, 208, 0.5);
+box-shadow: 0 0 0 10px white;
+margin-top: 150px;
+left: 50%;
+max-width: 400px;
+position: relative;
+}   
+.fundo-table{
+ 
+  background-color:transparent;
+  margin-top: 75px;
+  
+  align-items: center;
+  justify-content: center;
+  
+}
+table {
+  width: 50%;
+  margin-top: 15px;
+  display:block;
+  background-color: #CCC; 
+  margin-left: 25%;
+}
+thead {
+ 
+width: 100%;
+display: inline-block;  
+background-color: yellow;
+font-size: 20px;
+
+
+}
+tbody {
+  height: 600px;
+  display: inline-block;
+  width: 100%;
+  overflow: auto;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:hover {background-color: #ddd;}
+td,  th {
+  text-align: center;
+border: 1px solid #ddd;
+padding: 8px;
+
+}
+.atualizar-cliente a{
+  text-decoration:none ;
+  background-color:#1877f2;;
+  padding: 15px;
+  font-size: 20px;
+    color: white;
+    font-weight: bolder;
+    transition: .3s;;
+  }
+  .atualizar-cliente a:hover{
+  text-decoration:underline ;
+  background-color: #002b63;
+  }
+tfoot{
+
+display: inline-block;  
+background-color: yellow;
+font-size: 20px;
+  }
+</style>
+
+<div class="fundo-table" id="fundo-table">
+    <div id="clientexcluido" class="modalerro">
+        <div class="alerta-erro">
+            <p  style="color: black; font-size: 40px;"  id="erro" >
+                
+            </p>
+        <a onclick="closealerta()"class="close-alerta" title="Close Cadastro">x</a>
+        </div>
+        
+    </div>
+                  
+    <table>
+        <thead >
+            <tr class="cabeca">
+    
+                <th style="width: 2px;">ID</th>
+                <th style="width: 250px;" >Nome</th>
+                <th style="width: 150px;">cpf</th>
+                <th style="width: 150px;"  >Endereço</th>
+                <th style="width: 150px;">Cidade</th>
+                <th style="width: 150px;" >Estado</th>
+                <th style="width: 150px;" >Numero</th>
+                <th style="width: 150px;" >obs_cliente</th>
+                
+                <th style="width: 150px;" >Excluir</th>
+                <th style="width: 150px;" >Atualizar</th>
+                
+            
+            </tr>
+            
+        </thead>
+        <tbody class="corpo">
+            <tr>
+                {% for funcionario in funcionarios %}
+                    <td style="width: 0px;" class="id-cliente">{{ funcionario.id }}
+                        <input  class="checkboxbuscar" type="checkbox"></td>
+                    <td style="width: 250px;" >{{ funcionario.nome }}</td>
+                    <td style="width: 150px;" >{{ funcionario.cpf}}</td>
+                    <td style="width: 150px;">{{ funcionario.endereco }}</td>
+                    <td style="width: 150px;" >{{ funcionario.cidade }}</td>
+                    <td style="width: 150px;">{{ funcionario.estado }}</td>
+                    <td style="width: 150px;" >{{ funcionario.numero }}</td>
+                    <td style="width: 150px;">{{ funcionario.obs_cliente }}</td>
+                    
+                    <td style="width: 150px;" class="atualizar-cliente" ><a href="/excluir/{{ funcionario.id }}"  onclick="excluir()"> Excluir </a></td>
+                    <td style="width: 150px;" class="atualizar-cliente"><a href="/atualizar/{{ funcionario._id }}">
+                        Atualizar </a></td>
+            </tr>
+            {% endfor %}
+            
+        
+        </tbody>
+        <tfoot>
+            <tr>
+                <th style="width: 2px;">ID</th>
+                <th style="width: 250px;" >Nome</th>
+                <th style="width: 150px;">cpf</th>
+                <th style="width: 150px;"  >Endereço</th>
+                <th style="width: 150px;">Cidade</th>
+                <th style="width: 150px;" >Estado</th>
+                <th style="width: 150px;" >Numero</th>
+                <th style="width: 150px;" >obs_cliente</th>
+            </tr>
+        </tfoot>
+        <!-- FINAL  CADASTRO CLIENTE-->     
+    </table>
+</div>

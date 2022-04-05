@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+    <title>Document</title>
+    <link rel="stylesheet" href="menusistema.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='tela/menusistema.css') }}">
+    <script src="js.js" type="text/javascript"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='formjs/selecionarimagen.js')}}"></script>
+</head>
+
+<body>
+
+        <nav class="barra-menu-navigaton">
+            <ul class="barra-menu">
+                <li><a >Cadastro Clientes</a>
+                    <ul class="ul-bar">
+                        <li><a href="#" onclick="telacadastro()" title="Cadastro Clientes" >Clientes</a></li>
+                        <li><a href="{{ url_for('show_map') }}"onclick="opentableclientes()"target="iframe_artigos" >Tabela Clientes</a></li>
+                        <li>  <a href="https://blog.betrybe.com/carreira/como-manter-o-foco/" target="iframe_artigos">test</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" onclick="openlaunch()" >Laçamento</a></li>
+                
+                <li><a href="#">Recebido</a></li>
+                <li>
+                    <a href="#">Contato</a>
+                    <ul class="ul-bar">
+                    
+                        <a href="{{ url_for('login') }}">Logoff</a>
+                    </ul>
+                </li>
+              
+            </ul>   
+            
+        </nav>
+   
+       
+    <div class="container-sistema">
+        <img src="https://image.ibb.co/cahagv/green.jpg" title="" class="thumbnail" alt="">
+            <div id="cadastro-cliente"class="main-cadastro" tag="Cliente">
+               
+                <center> <h1 class="logo"> Cadastrar</h1></center>
+                <div id="ex1" class="modalerro">
+                    <div class="alerta-erro">
+                        <p  style="color: black; font-size: 40px;"  id="erro" >
+                            
+                        </p>
+                    <a onclick="closealerta()"class="close-alerta" title="Close Cadastro">x</a>
+                    </div>
+                    
+                </div>
+                
+                <form method="post" action="cadstroclientes" id="formcadastro"> 
+                      <!-- Modal HTML embedded directly into document -->
+                        
+                    <div id="cadastro-cliente"class="main--card">
+                        <span onclick="fecharcadastro()"class="close" title="Close Cadastro">x</span>
+                        <div class="max-width" >
+                            
+                            <div class="imageContainer"> 
+                                    <img src="facebook.png" onclick="selecionarimagen()"   alt="selecionar imagem" id="imgPhoto">
+                                    
+                            </div>                                   
+                            <input  type="file" name="flImage" id="flImage"   accept="image/*">
+                            
+                            <script src="{{url_for('static', filename='formjs/selecionarimagen.js')}}"></script>
+                        
+            
+                        </div>  
+                        <div class="container-sobre">
+            
+            
+                            <div >
+                                <label>Nome*</label>
+                                <input id="nome-cd" type="text" name="nome" placeholder="Nome" onkeyup="deixamaisculo()" >
+                                
+                            </div>
+                        
+                            <div >
+                                <label>Cpf*</label>
+                                <input id="cpf" type="text" name="cpf" placeholder="Cpf"onkeyup="mascaracpf()" >
+                                
+                            </div>
+                            
+                            <div>
+                                
+                                <label>Sobrenome*</label>
+                                <input type="text" id="sobre-nome" placeholder="Sobrenome">
+                            </div>
+                            <label>Data Nascimento</label>
+                            <div>
+                                <input type="date" id="diaa" name="diaa">
+                            </div>
+                                <label  >Mensagem:</label>
+                            <div>
+            
+                                <textarea class="texto" name="tx_mensagem"  ></textarea>
+                            </div>
+                            
+                            
+                        
+                        </div>   
+                        <div class="container-Endereço">
+                            <label >Cidade*</label>
+                            <div>
+                                <input type="text" placeholder="Cidade" name="cida-p" >
+                            </div>
+                            
+                            <Label>Cep*</Label>
+                            <div>
+                                <input type="text" placeholder="Cep">
+                            </div>
+                            <Label>Endereco*</Label>
+                            <div>
+                                <input type="text" placeholder="Endereço" name="end">
+                            </div>
+                    
+                            <label>Estado*</label>
+                            <div>
+                                <select  id="estado" name="estado">
+                                    <option >RO</option>
+                                    
+                                </select>   
+                            </div>
+                            
+                            <div class="telefone esquerda" id="">
+                                <label for="telefone">Telefone:</label><br>
+                                <input type="text" placeholder="0000-0000">
+                            </div>
+                            <div class="celular direita" id="">
+                                <label for="celular" >Ceular:</label><br>
+                                <input type="text" size="25" name="numero" placeholder="(00) 0000-0000">
+                            </div> 
+                            <div class="esquerda" id="">
+                                <label for="email">E-mail:</label><br>
+                                <input type="text" size="35" placeholder="exemplo@email.com">
+                            </div>
+                        
+                            
+                            
+                            
+                        </div>
+                        
+                        
+                    </div> 
+                           
+                 
+                    <center>
+                
+                        <div class="bnt">
+                            <button type="submit"  form="formcadastro" onclick="cadastrarcliente()" > Cadastrar</button>
+                            
+                        </div>
+                    </center>
+                    
+                </form>  
+                
+                
+            </div>
+            <iframe src="" class="framemenu"  name="iframe_artigos"></iframe>
+           
+            <div id="container-Lancamento" class="container-Lancamento">
+               
+                <center> <h1 class="logo"> Lançar</h1></center>
+                    <div class="card-lacamento">
+                        <span onclick="closelaunch()"class="close" title="Close Cadastro">x</span>
+                        <form action="">
+                            
+                            <div class="dados1">
+                                <div>
+                                    <label for="">nome</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label for="">Data Pagamento</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label for="">Tipo Documento</label>
+                                    <select name="" id="">
+                                        <option value="volvo">Volvo</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="">Valor</label>
+                                    <input type="text">
+                                </div>
+                                
+                            </div>
+                        </form>
+                        
+                    </div>  
+                    
+                
+                  
+            </div>   
+                       
+    </div>
+ 
+</body>
+</html>
